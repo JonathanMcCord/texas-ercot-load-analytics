@@ -35,23 +35,34 @@ End-to-end analytics project on 5 years of hourly grid load data from the Electr
 ```
 texas-ercot-load-analytics/
 ├── README.md
+├── requirements.txt
+│
 ├── data/
-│   ├── ercot_hourly_load_long.csv      # Long format: 43,848 × 9 zones
-│   ├── ercot_hourly_load_wide.csv      # Wide format: 43,848 rows × 9 zone columns
-│   └── dim_zone.csv                    # Zone dimension table
+│   ├── dim_zone.csv                          # Zone dimension table
+│   ├── raw/                                  # Original ERCOT source files
+│   │   ├── Native_Load_2020.xlsx
+│   │   ├── Native_Load_2021.xlsx
+│   │   ├── Native_Load_2022.xlsx
+│   │   ├── Native_Load_2023.xlsx
+│   │   └── Native_Load_2024.xlsx
+│   └── processed/                            # Cleaned outputs ready for BI
+│       ├── ercot_hourly_load_long.csv
+│       └── ercot_hourly_load_wide.csv
+│
+├── scripts/                                  # Python pipeline scripts
+│   └── (your existing .py files)
+│
+├── sql/                                      # SQL transformation files
+│   └── (your existing .sql files)
+│
 ├── dashboard/
-│   ├── ercot_load_analytics.pbix       # Power BI dashboard file
-│   └── visuals/
-│       ├── page1_executive_overview.png
-│       ├── page2_uri_case_study.png
-│       └── page3_temporal_patterns.png
-├── scripts/
-│   ├── 01_extract_ercot_data.py
-│   ├── 02_clean_and_transform.py
-│   ├── 03_sql_pipeline.sql
-│   └── 04_uri_case_study.py
-└── docs/
-    └── ERCOT_PowerBI_Build_Guide.md
+│   └── ERCOT Dashboard.pbix                  # Power BI file
+│
+└── visuals/                                  # Dashboard screenshots
+    ├── page1_executive_overview.png
+    ├── page2_uri_case_study.png
+    ├── page3_temporal_patterns.png
+    └── uri_load_collapse.png
 ```
 
 *Note: Update the scripts/ filenames to match your actual files.*
@@ -99,19 +110,19 @@ Three-page interactive dashboard built on a star-schema data model with 25+ DAX 
 
 ### Page 1 — Executive Overview
 
-![Page 1: Executive Overview](dashboard/visuals/page1_executive_overview.png)
+![Page 1: Executive Overview](visuals/page1_executive_overview.png)
 
 System-level KPIs, 5-year load trend, annual peak growth, zone distribution, and year-over-month seasonality heatmap. Slicers for Zone and Year enable interactive exploration.
 
 ### Page 2 — Winter Storm Uri Case Study
 
-![Page 2: Winter Storm Uri Case Study](dashboard/visuals/page2_uri_case_study.png)
+![Page 2: Winter Storm Uri Case Study](visuals/page2_uri_case_study.png)
 
 Three hero KPIs (peak, trough, % drop) anchor a dedicated case study page. Hourly timeline shows the cascade and recovery; two zone-level analyses reveal Far West as the disproportionately hardest-hit zone; human-impact context box ties data to lived reality.
 
 ### Page 3 — Temporal Patterns
 
-![Page 3: Temporal Patterns](dashboard/visuals/page3_temporal_patterns.png)
+![Page 3: Temporal Patterns](visuals/page3_temporal_patterns.png)
 
 Three-axis temporal analysis: 24-hour load profile (peak at 6 PM), day-of-week pattern (visible weekend dip), and monthly seasonality overlaid across all five years (clear year-over-year demand growth).
 
