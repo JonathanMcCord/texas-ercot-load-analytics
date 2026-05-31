@@ -50,13 +50,14 @@ texas-ercot-load-analytics/
 │       └── ercot_hourly_load_wide.csv
 │
 ├── scripts/                                  # Python pipeline scripts
-│   └── (your existing .py files)
+│   └── 01_clean_load_data.py
+│   └── 02_exploratory_analysis.py
 │
 ├── sql/                                      # SQL transformation files
-│   └── (your existing .sql files)
+│   └── load_aggregations.sql
 │
 ├── dashboard/
-│   └── ERCOT Dashboard.pbix                  # Power BI file
+│   └── ercot_load_analytics.pbix             # Power BI file
 │
 └── visuals/                                  # Dashboard screenshots
     ├── page1_executive_overview.png
