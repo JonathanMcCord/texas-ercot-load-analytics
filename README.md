@@ -63,11 +63,8 @@ texas-ercot-load-analytics/
     ├── page2_uri_case_study.png
     ├── page3_temporal_patterns.png
     └── uri_load_collapse.png
+
 ```
-
-*Note: Update the scripts/ filenames to match your actual files.*
-
----
 
 ## 🔧 Phase 1: Data Pipeline
 
