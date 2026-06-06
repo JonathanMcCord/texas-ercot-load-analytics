@@ -8,7 +8,7 @@ End-to-end analytics project on 5 years of hourly grid load data from the Electr
 
 ## Power BI Dashboard
 
-[View my interactive Power BI dashboard]((https://app.powerbi.com/view?r=eyJrIjoiODA1NjhlZGYtZGUzNy00OTlmLTgxYWUtOGM0MzMyZDAwZjcxIiwidCI6ImRiZmRmZjIwLTlkZjEtNGZjMi05M2FkLWY2ZTU2OWIzNmVjOCJ9&pageName=ee0766fa062e1edfc300)
+[View my interactive Power BI dashboard](https://app.powerbi.com/view?r=eyJrIjoiODA1NjhlZGYtZGUzNy00OTlmLTgxYWUtOGM0MzMyZDAwZjcxIiwidCI6ImRiZmRmZjIwLTlkZjEtNGZjMi05M2FkLWY2ZTU2OWIzNmVjOCJ9&pageName=ee0766fa062e1edfc300)
 
 ---
 
