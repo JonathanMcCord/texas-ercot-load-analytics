@@ -52,9 +52,7 @@ texas-ercot-load-analytics/
 ├── scripts/
 │   ├── 01_extract_ercot_data.py
 │   ├── 02_clean_and_transform.py
-│   ├── 03_sql_pipeline.sql
-│   ├── 04_uri_case_study.py
-│   └── 05_build_dim_weather.py         # Pulls historical weather from Open-Meteo API
+│   └── 03_build_dim_weather.py         # Pulls historical weather from Open-Meteo API
 └── docs/
     └── ERCOT_PowerBI_Build_Guide.md
 ```
@@ -104,25 +102,25 @@ Three-page interactive dashboard built on a star-schema data model with 25+ DAX 
 
 ### Page 1 — Executive Overview
 
-![Page 1: Executive Overview](dashboard/visuals/page1_executive_overview.png)
+![Page 1: Executive Overview](visuals/page1_executive_overview.png)
 
 System-level KPIs, 5-year load trend, annual peak growth, zone distribution, and year-over-month seasonality heatmap. Slicers for Zone and Year enable interactive exploration.
 
 ### Page 2 — Winter Storm Uri Case Study
 
-![Page 2: Winter Storm Uri Case Study](dashboard/visuals/page2_uri_case_study.png)
+![Page 2: Winter Storm Uri Case Study](visuals/page2_uri_case_study.png)
 
 Three hero KPIs (peak, trough, % drop) anchor a dedicated case study page. Hourly timeline shows the cascade and recovery; two zone-level analyses reveal Far West as the disproportionately hardest-hit zone; human-impact context box ties data to lived reality.
 
 ### Page 3 — Temporal Patterns
 
-![Page 3: Temporal Patterns](dashboard/visuals/page3_temporal_patterns.png)
+![Page 3: Temporal Patterns](visuals/page3_temporal_patterns.png)
 
 Three-axis temporal analysis: 24-hour load profile (peak at 6 PM), day-of-week pattern (visible weekend dip), and monthly seasonality overlaid across all five years (clear year-over-year demand growth).
 
 ### Page 4 — Weather Impact
 
-![Page 4: Weather Impact](dashboard/visuals/page4_weather_impact.png)
+![Page 4: Weather Impact](visuals/page4_weather_impact.png)
 
 Integrates external weather data (Open-Meteo API) to quantify the relationship between temperature and grid demand. The U-curve chart reveals that load rises ~38% from mild to extreme temperatures. A dual-axis overlay of February 2021 shows temperature and load collapsing in lockstep during Winter Storm Uri. Zone slicer enables weather-sensitivity comparison across regions.
 
