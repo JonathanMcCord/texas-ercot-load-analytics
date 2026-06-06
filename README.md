@@ -181,7 +181,7 @@ Integrated external weather data to analyze the relationship between temperature
 ## 🚀 How to Reproduce
 
 1. Clone this repository
-2. Open `dashboard/ercot_load_analytics.pbix` in Power BI Desktop (free download from Microsoft)
+2. Open `dashboard/ERCOT_dashboard.pbix` in Power BI Desktop (free download from Microsoft)
 3. Update data source paths to point to the local `data/` folder if needed (Transform Data → Data source settings)
 4. Refresh the model
 
