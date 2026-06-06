@@ -123,6 +123,7 @@ Three-axis temporal analysis: 24-hour load profile (peak at 6 PM), day-of-week p
 ![Page 4: Weather Impact](visuals/page4_weather_impact.png)
 
 Integrates external weather data (Open-Meteo API) to quantify the relationship between temperature and grid demand. The U-curve chart reveals that load rises ~38% from mild to extreme temperatures. A dual-axis overlay of February 2021 shows temperature and load collapsing in lockstep during Winter Storm Uri. Zone slicer enables weather-sensitivity comparison across regions.
+
 ---
 
 ## 🌡 Phase 4: Weather Integration
