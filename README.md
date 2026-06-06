@@ -164,7 +164,7 @@ Includes time-intelligence (YoY Change %, Peak Load YTD), event-window measures 
 Integrated external weather data to analyze the relationship between temperature and grid demand.
 
 **Pipeline:**
-- Built a Python script (`05_build_dim_weather.py`) that pulls 5 years of daily weather from the Open-Meteo Historical API for 8 representative Texas cities — one per ERCOT zone
+- Built a Python script (`03_build_dim_weather.py`) that pulls 5 years of daily weather from the Open-Meteo Historical API for 8 representative Texas cities — one per ERCOT zone
 - Output includes daily high/low/mean temperature (°F), feels-like temperature, max wind speed, precipitation, snowfall, and derived temperature categories
 
 **Data model extension:**
@@ -188,11 +188,11 @@ Integrated external weather data to analyze the relationship between temperature
 To run the data pipeline scripts (Phase 1):
 1. Install Python dependencies: `pandas`, `sqlalchemy` (if applicable)
 2. Update `BASE_DIR` constants in the scripts to match your local path
-3. Run scripts in numbered order (01 → 04)
+3. Run scripts in numbered order (01 & 02)
 
 To pull weather data (Phase 4):
 1. Install Python dependencies: `pip install requests pandas`
-2. Run `python scripts/05_build_dim_weather.py`
+2. Run `python scripts/03_build_dim_weather.py`
 3. The script pulls from the free Open-Meteo API (no API key required) and outputs `dim_weather.csv` to the data folder
 
 ---
