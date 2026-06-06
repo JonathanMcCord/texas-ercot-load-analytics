@@ -6,6 +6,10 @@ End-to-end analytics project on 5 years of hourly grid load data from the Electr
 
 ---
 
+https://app.powerbi.com/reportEmbed?reportId=4ce494fa-7db8-4ffd-b423-8731d573419c&autoAuth=true&ctid=dbfdff20-9df1-4fc2-93ad-f6e569b36ec8&actionBarEnabled=true
+
+---
+
 ## 📊 Project Snapshot
 
 | Metric | Value |
