@@ -143,6 +143,9 @@ Integrated external weather data to analyze the relationship between temperature
 - Hot weather pulls slightly more load than extreme cold, consistent with Texas where AC is the dominant demand driver
 - February 2021 overlay confirms temperature and load collapsed simultaneously during Winter Storm Uri
 
+---
+
+
 ### Data Model
 
 ```
