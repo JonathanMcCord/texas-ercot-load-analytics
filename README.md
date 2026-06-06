@@ -123,6 +123,24 @@ Three-axis temporal analysis: 24-hour load profile (peak at 6 PM), day-of-week p
 ![Page 4: Weather Impact](visuals/page4_weather_impact.png)
 
 Integrates external weather data (Open-Meteo API) to quantify the relationship between temperature and grid demand. The U-curve chart reveals that load rises ~38% from mild to extreme temperatures. A dual-axis overlay of February 2021 shows temperature and load collapsing in lockstep during Winter Storm Uri. Zone slicer enables weather-sensitivity comparison across regions.
+---
+
+## 🌡 Phase 4: Weather Integration
+
+Integrated external weather data to analyze the relationship between temperature and grid demand.
+
+**Pipeline:**
+- Built a Python script (`03_build_dim_weather.py`) that pulls 5 years of daily weather from the Open-Meteo Historical API for 8 representative Texas cities — one per ERCOT zone
+- Output includes daily high/low/mean temperature (°F), feels-like temperature, max wind speed, precipitation, snowfall, and derived temperature categories
+
+**Data model extension:**
+- Added DimWeather as a shared-dimension table connecting to DimDate and DimZone with bidirectional cross-filtering
+- This creates a multi-source star schema where hourly load data and daily weather data are analyzed together through common dimensions
+
+**Key findings:**
+- Grid demand follows a U-shaped curve: highest at extreme cold (13.1K MW) and extreme heat (13.3K MW), lowest during mild conditions (9.6K MW)
+- Hot weather pulls slightly more load than extreme cold, consistent with Texas where AC is the dominant demand driver
+- February 2021 overlay confirms temperature and load collapsed simultaneously during Winter Storm Uri
 
 ### Data Model
 
@@ -157,24 +175,6 @@ Includes time-intelligence (YoY Change %, Peak Load YTD), event-window measures 
 - **Open-Meteo API:** historical weather data (temperature, wind, precipitation)
 - **Git/GitHub:** version control and project hosting
 
----
-
-## 🌡 Phase 4: Weather Integration
-
-Integrated external weather data to analyze the relationship between temperature and grid demand.
-
-**Pipeline:**
-- Built a Python script (`03_build_dim_weather.py`) that pulls 5 years of daily weather from the Open-Meteo Historical API for 8 representative Texas cities — one per ERCOT zone
-- Output includes daily high/low/mean temperature (°F), feels-like temperature, max wind speed, precipitation, snowfall, and derived temperature categories
-
-**Data model extension:**
-- Added DimWeather as a shared-dimension table connecting to DimDate and DimZone with bidirectional cross-filtering
-- This creates a multi-source star schema where hourly load data and daily weather data are analyzed together through common dimensions
-
-**Key findings:**
-- Grid demand follows a U-shaped curve: highest at extreme cold (13.1K MW) and extreme heat (13.3K MW), lowest during mild conditions (9.6K MW)
-- Hot weather pulls slightly more load than extreme cold, consistent with Texas where AC is the dominant demand driver
-- February 2021 overlay confirms temperature and load collapsed simultaneously during Winter Storm Uri
 
 ---
 
